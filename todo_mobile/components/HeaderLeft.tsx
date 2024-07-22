@@ -21,6 +21,7 @@ const HeaderLeft = ({navigation}:HeaderLeftProps) => {
             onPress={() => {
                 navigation.goBack();
             }}
+            testID='back-button'
         />
     );
 };

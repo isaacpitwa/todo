@@ -12,8 +12,8 @@ const Loader = () => {
         <View style={{
             flex: 1, height: height, justifyContent: 'center',
             alignItems: 'center',
-        }}>
-            <ActivityIndicator />
+        }} testID='loader'>
+            <ActivityIndicator testID='activity-indicator' />
         </View>
     );
 };

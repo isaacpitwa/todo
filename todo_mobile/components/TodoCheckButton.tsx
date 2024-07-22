@@ -37,7 +37,7 @@ const TodoCheckButton = ({ completed, id }: TodoCheckButtonProps) => {
 
     return (
         <Pressable style={completed ? styles.completedStyles : styles.container} onPress={markAsCompleted}>
-            {completed && <AntDesign name="check" size={14} color="#fff" />}
+            {completed && <AntDesign name="check" size={14} color="#fff" testID="check-icon" />}
         </Pressable>
     );
 };

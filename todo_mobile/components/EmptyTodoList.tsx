@@ -25,7 +25,7 @@ const EmptyTodoList = () => {
         <View  style={styles.container}>
             <Text style={styles.leadingText}>No Tasks Added.</Text>
             <Text style={styles.descText}>Add a task to get started.</Text>
-            <Button icon="plus" mode="contained" onPress={handleBtnPressed}>Add Todo</Button>
+            <Button icon="plus" mode="contained" onPress={handleBtnPressed} testID='add-button'>Add Todo</Button>
         </View>
     );
 };
