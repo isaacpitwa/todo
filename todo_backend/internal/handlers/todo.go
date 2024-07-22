@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
+	"sort"
 	"todo-app/internal/models"
 	"todo-app/internal/storage"
 )
@@ -34,6 +35,11 @@ func AddTodoHandler(w http.ResponseWriter, r *http.Request) {
 func GetTodosHandler(w http.ResponseWriter, r *http.Request) {
 	// Get the list of to-do items from the storage
 	todos := storage.GetTodos()
+
+	// Sort the todos by CreatedAt field
+    sort.Slice(todos, func(i, j int) bool {
+        return todos[i].CreatedAt.After(todos[j].CreatedAt)
+    })
 
 	// Set the response content type to JSON
 	w.Header().Set("Content-Type", "application/json")
