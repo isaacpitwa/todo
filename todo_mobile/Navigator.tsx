@@ -23,8 +23,8 @@ export const Navigator = () => {
               <Text
                 style={{
                   marginLeft: 20,
-                  fontSize: 16,
-                  fontWeight: "600",
+                  fontSize: 18,
+                  fontWeight: "700",
                   color: "#000",
                 }}
               >
@@ -38,7 +38,7 @@ export const Navigator = () => {
                 icon="plus"
                 onPress={() => navigation.navigate("addTodo")}
               >
-                Add Todo
+                Add Task
               </Button>
             ),
           })}
