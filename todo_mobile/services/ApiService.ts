@@ -13,7 +13,6 @@ ApiService.interceptors.request.use(async (config) => {
 });
 
 ApiService.interceptors.response.use((response)=>{
-     console.log("Response Status: ", response.data.status);
     return response;
 
 })

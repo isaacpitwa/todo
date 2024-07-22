@@ -21,3 +21,12 @@ export const getTodos = async ()=>{
         console.log("Error fetching Todos: " + error)
     }
 }
+
+export const markTodoAsCompleted = async (id: number)=>{
+    try {
+        const response = await ApiService.put(`/updateTodoStatus?id=${id}`)
+        return response.data
+    } catch (error) {
+        console.log("Error marking Todo as completed: " + error)
+    }
+}

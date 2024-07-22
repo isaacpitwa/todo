@@ -11,8 +11,14 @@ type TodoProps = {
 const TodoCard = ({ todo }: TodoProps) => {
   return (
     <View style={styles.container}>
-      <TodoCheckButton completed={todo.status === "completed"} />
-      <Text numberOfLines={2}>{todo.task}</Text>
+      <TodoCheckButton completed={todo.status === "completed"} id={todo.id} />
+      <Text 
+      numberOfLines={2}
+        style={{
+            fontSize: 16,
+            textDecorationLine: todo.status === "completed" ? "line-through" : "none",
+        }}
+      >{todo.task}</Text>
     </View>
   );
 };
