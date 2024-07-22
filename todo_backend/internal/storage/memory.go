@@ -3,6 +3,7 @@ package storage
 import (
 	"sync"
 	"time"
+	"errors"
 	"todo-app/internal/models"
 )
 
@@ -36,4 +37,19 @@ func GetTodos() []models.Todo {
 	defer mutex.Unlock()
 
 	return todos
+}
+
+// UpdateTodoStatus updates the status of a to-do item by its ID
+func UpdateTodoStatus(id int, status models.Status) (models.Todo, error) {
+	mutex.Lock()
+	defer mutex.Unlock()
+
+	for i, todo := range todos {
+		if todo.ID == id {
+			todos[i].Status = status
+			todos[i].UpdatedAt = time.Now()
+			return todos[i], nil
+		}
+	}
+	return models.Todo{}, errors.New("to-do item not found")
 }

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"sort"
+	"strconv"
 	"todo-app/internal/models"
 	"todo-app/internal/storage"
 )
@@ -46,4 +47,32 @@ func GetTodosHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Encode the to-do list to JSON and write it to the response
 	json.NewEncoder(w).Encode(todos)
+}
+
+// UpdateTodoStatusHandler handles updating the status of a specific to-do item
+func UpdateTodoStatusHandler(w http.ResponseWriter, r *http.Request) {
+	// Ensure the request method is PUT
+	if r.Method != http.MethodPut {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Get the ID from the URL path
+	idStr := r.URL.Query().Get("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		http.Error(w, "Invalid to-do ID", http.StatusBadRequest)
+		return
+	}
+
+	// Update the to-do status to completed
+	todo, err := storage.UpdateTodoStatus(id, models.Completed)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Respond with the updated to-do item
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(todo)
 }

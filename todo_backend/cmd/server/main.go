@@ -14,6 +14,8 @@ func main() {
 	// Define HTTP handlers for the endpoints
 	http.HandleFunc("/addTodo", handlers.AddTodoHandler)
 	http.HandleFunc("/getTodos", handlers.GetTodosHandler)
+	http.HandleFunc("/updateTodoStatus", handlers.UpdateTodoStatusHandler)
+
 
 	// Start the HTTP server on port 8080
 	log.Println("Server is running on port 8080")
