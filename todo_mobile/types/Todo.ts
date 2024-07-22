@@ -1,7 +1,6 @@
 export type Todo = {
     id: number;
-    title: string;
-    description: string;
+    task: string;
     status: 'completed' | 'pending';
 };
 

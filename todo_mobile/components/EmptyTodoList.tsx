@@ -1,23 +1,29 @@
 import React from 'react';
 import { Dimensions, View,StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
 
 const {height} = Dimensions.get('screen');
 const EmptyTodoList = () => {
+    const navigation = useNavigation();
+    const handleBtnPressed = ()=>{
+        navigation.navigate('addTodo');
+    }
     return (
         <View  style={styles.container}>
             <Text style={styles.leadingText}>No Tasks Added.</Text>
             <Text style={styles.descText}>Add a task to get started.</Text>
-            <Button icon="plus" mode="contained" onPress={() => console.log('Pressed')}>Add Todo</Button>
+            <Button icon="plus" mode="contained" onPress={handleBtnPressed}>Add Todo</Button>
         </View>
     );
 };
 const styles = StyleSheet.create({
     container: {
-        height: height,
+        height: height-200,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        // backgroundColor: '#FAFAFA',
     },
     leadingText :{
         fontWeight:'600',

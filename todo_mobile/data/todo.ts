@@ -16,10 +16,8 @@ export const addTodo = async (task: string)=>{
 export const getTodos = async ()=>{
     try {
         const response = await ApiService.get(`/getTodos`)
-        console.log("getTodos response: ", response.data)
         return response.data
     } catch (error) {
         console.log("Error fetching Todos: " + error)
-
     }
 }
