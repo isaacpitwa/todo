@@ -2,13 +2,14 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Button, TextInput } from "react-native-paper";
 import { addTodo } from "../data/todo";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation,ParamListBase } from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import { useQueryClient } from "@tanstack/react-query";
 
 const AddTodo = () => {
   const [task, setTask] = React.useState("");
   const [submiting, setSubmiting] = React.useState(false);
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
   const queryClient = useQueryClient();
   const handleTaskSubmit = async () => {
     setSubmiting(true);

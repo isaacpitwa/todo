@@ -1,12 +1,14 @@
 import React from 'react';
 import { Dimensions, View,StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-paper';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation,ParamListBase } from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+
 
 
 const {height} = Dimensions.get('screen');
 const EmptyTodoList = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
     const handleBtnPressed = ()=>{
         navigation.navigate('addTodo');
     }
