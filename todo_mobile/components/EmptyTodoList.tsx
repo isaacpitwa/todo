@@ -34,7 +34,6 @@ const styles = StyleSheet.create({
         height: height-200,
         justifyContent: 'center',
         alignItems: 'center',
-        // backgroundColor: '#FAFAFA',
     },
     leadingText :{
         fontWeight:'600',
