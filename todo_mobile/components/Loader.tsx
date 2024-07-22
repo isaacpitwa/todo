@@ -3,6 +3,10 @@ import { Dimensions, View, ActivityIndicator } from 'react-native'
 
 const { height } = Dimensions.get('screen')
 
+/**
+ * A component that displays a loader with an activity indicator.
+ * @returns The Loader component.
+ */
 const Loader = () => {
     return (
         <View style={{

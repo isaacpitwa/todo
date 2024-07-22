@@ -7,11 +7,20 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 
 const {height} = Dimensions.get('screen');
+/**
+ * Renders a component for an empty todo list.
+ * Allows the user to add a new todo.
+ */
 const EmptyTodoList = () => {
     const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
-    const handleBtnPressed = ()=>{
+
+    /**
+     * Handles the button press event and navigates to the addTodo screen.
+     */
+    const handleBtnPressed = () => {
         navigation.navigate('addTodo');
     }
+
     return (
         <View  style={styles.container}>
             <Text style={styles.leadingText}>No Tasks Added.</Text>

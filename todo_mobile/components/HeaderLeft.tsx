@@ -6,6 +6,13 @@ type HeaderLeftProps = {
     navigation: any;
 };
 
+/**
+ * Renders a custom header component with a back button.
+ *
+ * @param {HeaderLeftProps} props - The component props.
+ * @param {NavigationProp<ParamListBase>} props.navigation - The navigation object.
+ * @returns {React.ReactElement} The rendered component.
+ */
 const HeaderLeft = ({navigation}:HeaderLeftProps) => {
     return (
         <IconButton

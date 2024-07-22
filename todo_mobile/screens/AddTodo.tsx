@@ -6,47 +6,56 @@ import { useNavigation,ParamListBase } from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import { useQueryClient } from "@tanstack/react-query";
 
+/**
+ * Component for adding a new todo task.
+ */
 const AddTodo = () => {
-  const [task, setTask] = React.useState("");
-  const [submiting, setSubmiting] = React.useState(false);
-  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
-  const queryClient = useQueryClient();
-  const handleTaskSubmit = async () => {
-    setSubmiting(true);
-    const response = await addTodo(task);
-    setSubmiting(false);
-    setTask("");
-    queryClient.invalidateQueries({ queryKey: ['TodoList'] });
-    navigation.navigate("todoList");
-  };
-  return (
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Enter task "
-        theme={{ colors: { primary: "transparent" } }}
-        underlineColor="#F4f4f4"
-        value={task}
-        placeholderTextColor="#A4A4A4"
-        onChangeText={(text) => {
-          setTask(text);
-        }}
-        selectionColor="#4d0780"
-        cursorColor="#4d0780"
-        returnKeyType="done"
-        autoFocus={true}
-        onSubmitEditing={handleTaskSubmit}
-      />
-      <Button
-        mode="contained"
-        style={{ marginTop: 20 }}
-        disabled={task.length === 0}
-        onPress={handleTaskSubmit}
-        loading={submiting}
-      >        Add Task
-      </Button>
-    </View>
-  );
+    const [task, setTask] = React.useState("");
+    const [submiting, setSubmiting] = React.useState(false);
+    const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+    const queryClient = useQueryClient();
+
+    /**
+     * Handles the submission of a new task.
+     */
+    const handleTaskSubmit = async () => {
+        setSubmiting(true);
+        const response = await addTodo(task);
+        setSubmiting(false);
+        setTask("");
+        queryClient.invalidateQueries({ queryKey: ['TodoList'] });
+        navigation.navigate("todoList");
+    };
+
+    return (
+        <View style={styles.container}>
+            <TextInput
+                style={styles.input}
+                placeholder="Enter task "
+                theme={{ colors: { primary: "transparent" } }}
+                underlineColor="#F4f4f4"
+                value={task}
+                placeholderTextColor="#A4A4A4"
+                onChangeText={(text) => {
+                    setTask(text);
+                }}
+                selectionColor="#4d0780"
+                cursorColor="#4d0780"
+                returnKeyType="done"
+                autoFocus={true}
+                onSubmitEditing={handleTaskSubmit}
+            />
+            <Button
+                mode="contained"
+                style={{ marginTop: 20 }}
+                disabled={task.length === 0}
+                onPress={handleTaskSubmit}
+                loading={submiting}
+            >
+                Add Task
+            </Button>
+        </View>
+    );
 };
 const styles = StyleSheet.create({
   container: {

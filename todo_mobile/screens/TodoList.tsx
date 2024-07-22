@@ -7,6 +7,11 @@ import Loader from '../components/Loader';
 import Todo from '../components/Todo';
 
 
+/**
+ * Renders a list of todos.
+ * 
+ * @returns The TodoList component.
+ */
 const TodoList = () => {
     const [refreshing, setRefreshing] = useState(false);
 

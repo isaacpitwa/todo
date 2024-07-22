@@ -2,25 +2,32 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Todo } from "../types/Todo";
 import TodoCheckButton from "./TodoCheckButton";
-import { CONFIG } from "../Config";
 
 type TodoProps = {
   todo: Todo;
 };
 
+/**
+ * Renders a Todo card component.
+ *
+ * @param {TodoProps} props - The props object containing the todo data.
+ * @returns {JSX.Element} The rendered Todo card component.
+ */
 const TodoCard = ({ todo }: TodoProps) => {
-  return (
-    <View style={styles.container}>
-      <TodoCheckButton completed={todo.status === "completed"} id={todo.id} />
-      <Text 
-      numberOfLines={2}
-        style={{
-            fontSize: 16,
-            textDecorationLine: todo.status === "completed" ? "line-through" : "none",
-        }}
-      >{todo.task}</Text>
-    </View>
-  );
+    return (
+        <View style={styles.container}>
+            <TodoCheckButton completed={todo.status === "completed"} id={todo.id} />
+            <Text 
+                numberOfLines={2}
+                style={{
+                    fontSize: 16,
+                    textDecorationLine: todo.status === "completed" ? "line-through" : "none",
+                }}
+            >
+                {todo.task}
+            </Text>
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({
