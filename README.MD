@@ -1,4 +1,4 @@
-# Repository for Challenge Solutions
+# Coding Challenge Solutions - [Isaac Pitwa]
 
 This repository contains solutions to the challenge questions, structured in separate folders for clarity and organization.
 
