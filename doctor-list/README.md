@@ -32,29 +32,16 @@ Open http://localhost:3000 to view it in the browser. The page will reload if yo
 ## API Used
  This application uses the following API to fetch the list of doctors: https://63c15b437165626718791c6c.mockapi.io/challenge/api/doctors
 
-## Available Scripts
+## Tools and Languages 
 
-In the project directory, you can run:
+The following tools and languages were used in the development of this project:
 
-### `npm start`
+- [Create React App](https://github.com/facebook/create-react-app) - A tool for creating React applications.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - The standard markup language for creating web pages.
+- [Axios](https://axios-http.com/) - A promise-based HTTP client for making API requests.
+- [React Query](https://react-query.tanstack.com/) - A data-fetching library for React applications.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to explore the project's repository for more details on how these tools and languages were utilized.
