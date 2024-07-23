@@ -41,3 +41,4 @@ When you run the code, you should see output similar to the following:
 In word "annoying", the most common characters are [n]
 In word "implementation", the most common characters are [i m e t n]
 In word "example string with some characters", the most common characters are [ ]
+```
