@@ -1,7 +1,5 @@
 # Doctors List Application
 
-# Doctors List Application
-
 This project is a responsive web application for listing doctors, built with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo Video

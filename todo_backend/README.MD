@@ -2,6 +2,10 @@
 
 A simple Todo application implemented in Go with a RESTful API.
 
+## Demo Video
+
+Check out the [demo video](https://www.loom.com/share/0eaaddd2fe5e4d14adcb282df4288410?sid=8b7d1868-6d2e-4bcb-83f8-bf1368079ae8) to see the application in action.
+
 ## Project Structure
 
 ```
