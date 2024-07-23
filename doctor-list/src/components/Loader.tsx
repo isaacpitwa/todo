@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Loader component displays a loading spinner.
+ */
 const Loader = () => {
   return (
     <div role="status" className="flex justify-center items-center h-screen">

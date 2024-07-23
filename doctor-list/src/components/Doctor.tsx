@@ -4,6 +4,13 @@ import { TypeDoctor } from "../types/Doctor";
 type DoctorProps = {
   doctor: TypeDoctor;
 };
+/**
+ * Renders a single doctor component.
+ *
+ * @param {DoctorProps} props - The props object containing the doctor data.
+ * @param {Doctor} props.doctor - The doctor object containing the doctor's information.
+ * @returns {JSX.Element} The rendered doctor component.
+ */
 const Doctor = ({ doctor }: DoctorProps) => {
   return (
     <li className="bg-white shadow-md p-4 flex flex-col md:flex-row items-center w-full md:w-4/5 mx-auto mb-4 rounded-3xl">
