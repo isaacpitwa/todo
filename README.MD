@@ -1,5 +1,4 @@
-```markdown
-# Mono Repository for Challenge Solutions
+# Repository for Challenge Solutions
 
 This repository contains solutions to the challenge questions, structured in separate folders for clarity and organization.
 
@@ -197,4 +196,3 @@ export const Service = {
 ```
 
 This repository contains all the solutions to the provided challenge questions. Follow the setup instructions for each solution to run and test them locally.
-```
