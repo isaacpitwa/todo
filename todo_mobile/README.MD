@@ -4,7 +4,7 @@ This is a mobile application for managing your to-do list. The app allows users 
 
 ## Demo Video
 
-Check out the [demo video](https://www.loom.com/share/b0af0c47b6184cee9840eee0a50e74a9?sid=8d8e25fb-f4b2-4af2-9783-4ed85a182e82) to see the application in action.
+Check out the [demo video](https://www.loom.com/share/b0af0c47b6184cee9840eee0a50e74a9?sid=81465686-0f94-4bda-bfc2-904c7344f982) to see the application in action.
 
 ## Features
 
