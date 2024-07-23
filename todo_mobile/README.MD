@@ -38,16 +38,15 @@ Check out the [demo video](https://www.loom.com/share/b0af0c47b6184cee9840eee0a5
     ```
 
 ### Running the App
+Before running the app, make sure that the backend server is running. This app requires the [`todo_backend`](../todo_backend/) server to be running in order to function properly.
+
+After successfully running the backend server, update the `API_BASE_URL` in [Config.ts](./Config.ts)  to your server Host.
+
+NOTE: If you're running the backend locally, use `ifConfig` and use en0 ipAddress as host. For example, `http://192.168.11.54:8080`.
 
 #### iOS
 
 1. Start the Simulator or connect an iOS device.
-
-    ```sh
-    cd ios
-    pod install
-    cd ..
-    ```
 
 2. Run the app:
 
@@ -77,3 +76,4 @@ To run the tests, use the following command:
 npm test
 # or
 yarn test
+
