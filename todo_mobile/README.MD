@@ -77,3 +77,20 @@ npm test
 # or
 yarn test
 
+## Tools and Languages Used
+
+This project utilizes the following tools and languages:
+
+- React Native: A JavaScript framework for building mobile applications.
+- Node.js: A JavaScript runtime environment.
+- npm: A package manager for JavaScript.
+- Expo CLI: A command-line interface for developing and building Expo projects.
+
+## Packages Used
+
+The following packages are used in this project:
+
+- react-navigation: A routing and navigation library for React Native.
+- axios: A promise-based HTTP client for making API requests.
+- react-native-elements: A UI toolkit for building React Native applications.
+- react-native-vector-icons: A library for adding customizable icons to React Native applications.
