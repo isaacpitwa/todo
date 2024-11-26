@@ -1,6 +1,6 @@
-# Coding Challenge Solutions - [Isaac Pitwa]
+# TODO
 
-This repository contains solutions to the challenge questions, structured in separate folders for clarity and organization.
+This repository contains Full stack  for TODO app.
 
 ### Demo Videos
 
